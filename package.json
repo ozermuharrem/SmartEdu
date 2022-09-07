@@ -1,0 +1,31 @@
+{
+  "name": "smartedu",
+  "version": "1.0.0",
+  "description": "smartEdu",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozermuharrem/SmartEdu.git"
+  },
+  "keywords": [
+    "smartEdu",
+    "nodejs",
+    "proje"
+  ],
+  "author": "mozer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozermuharrem/SmartEdu/issues"
+  },
+  "homepage": "https://github.com/ozermuharrem/SmartEdu#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
