@@ -70,4 +70,4 @@ Aşağıdaki örneğimizde page_name 'in aldığı değerin ne olduğuna göre a
 
 Kaynak : patika.dev nodejs dersi 
 
-[NODEJS OATİKASI]{https://app.patika.dev/paths/nodejs-ile-backend-patikasi}
+[NODEJS PATİKASI](https://app.patika.dev/paths/nodejs-ile-backend-patikasi)
