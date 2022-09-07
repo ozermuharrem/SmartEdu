@@ -11,9 +11,9 @@
 
 
 
- > sunucu ile istemci arasında temel iletişimi tcpid sağlıyor.
- > http ise sunucu ile istemci arasında ki konuşma yöntemleridir. 
- > http status code ise o anki yapılan işlem hk. bilgi verir
+ > sunucu ile istemci arasında temel iletişimi tcpid sağlıyor.<br>
+ > http ise sunucu ile istemci arasında ki konuşma yöntemleridir.<br> 
+ > http status code ise o anki yapılan işlem hk. bilgi verir<br>
 
  ### Sık Kullanılan Durum Kodları
 
@@ -30,23 +30,23 @@
 
 ## Link Güncelleme 
 
-Projemizde linklerin ilgili sayfaya göre aktif olmasını istiyoruz. Bunun için ilgili template dosyasın o bilgiyi page_name olarak gönderiyoruz. İlgili `page_name`'e ait olan değer her sayfaya göre değişiyor. Örneğin index sayfası için:
+Projemizde linklerin ilgili sayfaya göre aktif olmasını istiyoruz. Bunun için ilgili template dosyasın o bilgiyi `page_name` olarak gönderiyoruz. İlgili `page_name`'e ait olan değer her sayfaya göre değişiyor. Örneğin index sayfası için:
 
 `
-app.get('/', (req, res) => {
-  res.status(200).render('index', {
-      page_name: "index"
-  });
-});
+app.get('/', (req, res) => {<br>
+  res.status(200).render('index', {<br>
+      page_name: "index"<br>
+  });<br>
+});<br>
 `
 about sayfası için:
 
 `
-app.get('/about', (req, res) => {
-  res.status(200).render('about', {
-    page_name: 'about',
-  });
-}); 
+app.get('/about', (req, res) => {<br>
+  res.status(200).render('about', {<br>
+    page_name: 'about',<br>
+  });<br>
+}); <br>
 `
 
 "page_name" ilgili template dosyasına gönderildi. Bunları "ejs" template motoru ile yakalamak için bir değişken şeklinde düşünebiliriz.
@@ -56,13 +56,10 @@ app.get('/about', (req, res) => {
 Aşağıdaki örneğimizde page_name 'in aldığı değerin ne olduğuna göre active classı ilgili linke ekleniyor.
 
 `
-<li class="nav-item <%= page_name ==='index' && 'active' %>"><a class="nav-link" href="/">Home</a></li>
-<li class="nav-item <%= page_name ==='about' && 'active' %>"><a class="nav-link" href="/about">About Us</a></li>
+"<li class="nav-item <%= page_name ==='index' && 'active' %>"><a class="nav-link" href="/">Home</a></li>
+<li class="nav-item <%= page_name ==='about' && 'active' %>"><a class="nav-link" href="/about">About Us</a></li>"
 
 `
-
-
-
 
 
 
@@ -70,4 +67,4 @@ Aşağıdaki örneğimizde page_name 'in aldığı değerin ne olduğuna göre a
 
 Kaynak : patika.dev nodejs dersi 
 
-[NODEJS OATİKASI]{https://app.patika.dev/paths/nodejs-ile-backend-patikasi}
+[NODEJS PATİKASI](https://app.patika.dev/paths/nodejs-ile-backend-patikasi)
