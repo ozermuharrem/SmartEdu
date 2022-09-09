@@ -1,7 +1,20 @@
 const express = require('express');
 const ejs = require('ejs');
-const app = express();
+const mongoose = require('mongoose');
 const path = require('path');
+const pageRoute = require('./routers/pageRoute');
+const courseRoute = require('./routers/coursRoute');
+
+mongoose.connect('mongodb+srv://mozer-smartEdu:8ANquaTKnSYl7gJn@cluster0.hpez2i7.mongodb.net/smartEdu?retryWrites=true&w=majority')
+.then(()=>{
+    console.log('db connected')
+})
+.catch((err)=>{
+    console.log(err)
+})
+
+const app = express();
+
 
 
 
@@ -11,17 +24,10 @@ app.use(express.static('public'));
 // templete engine
 app.set("view engine", "ejs");
 
-app.get('/', (req,res) => {
-    res.status(200).render('index',{
-        page_name : "index"
-    });
-})
+app.use('/', pageRoute )
+app.use('/courses', courseRoute )
 
-app.get('/about', (req,res) => {
-    res.status(200).render('about',{
-        page_name : "about"
-    });
-})
+
 
 
 const port = 3001;
