@@ -20,6 +20,8 @@ const app = express();
 
 // midllewares
 app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
 
 // templete engine
 app.set("view engine", "ejs");
