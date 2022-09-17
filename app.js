@@ -5,6 +5,8 @@ const path = require('path');
 const pageRoute = require('./routers/pageRoute');
 const courseRoute = require('./routers/coursRoute');
 const categoryRoute = require('./routers/categoryRoute');
+const userRoute = require('./routers/userRoute');
+
 
 
 mongoose.connect('mongodb+srv://mozer-smartEdu:8ANquaTKnSYl7gJn@cluster0.hpez2i7.mongodb.net/smartEdu?retryWrites=true&w=majority')
@@ -31,6 +33,8 @@ app.set("view engine", "ejs");
 app.use('/', pageRoute )
 app.use('/courses', courseRoute );
 app.use('/categories', categoryRoute )
+app.use('/users', userRoute )
+
 
 
 
