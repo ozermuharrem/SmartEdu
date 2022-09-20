@@ -25,11 +25,11 @@ exports.loginUser = async (req, res) => {
             if(user) {
                 bcrypt.compare(password, user.password , (err , same) => {
                     if(same)
-                    res.status(200).send('login oldunuz');
+                    // user session
+                        res.status(200).send('login oldunuz');
                 })
             }
         })
-
     } catch (error) {
         res.status(400).json({
             status : 'fail',
