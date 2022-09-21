@@ -1,11 +1,16 @@
 const express = require('express');
+const authMidllewear = require('../midllewears/authMidllewear');
 
-const AuthController = require('../controllers/authController')
+const authController = require('../controllers/authController')
 
 const router = express.Router();
 
-router.route('/signup').post(AuthController.createUser);
-router.route('/login').post(AuthController.loginUser);
+router.route('/signup').post(authController.createUser);
+router.route('/login').post(authController.loginUser);
+router.route('/logout').get(authController.logoutUser);
+router.route('/dashboard').get(authMidllewear, authController.getDashboardPage);
+
+
 
 
 
