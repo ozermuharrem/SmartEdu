@@ -1,10 +1,9 @@
 {
   "name": "smartedu",
   "version": "1.0.0",
-  "description": "smartEdu",
+  "description": "Education Portal",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "repository": {
@@ -12,26 +11,26 @@
     "url": "git+https://github.com/ozermuharrem/SmartEdu.git"
   },
   "keywords": [
-    "smartEdu",
-    "nodejs",
-    "proje"
+    "education",
+    "portal",
+    "node.js"
   ],
-  "author": "mozer",
+  "author": "Muharrem Özer",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ozermuharrem/SmartEdu/issues"
-  },
-  "homepage": "https://github.com/ozermuharrem/SmartEdu#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "connect-mongo": "^4.6.0",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "express-session": "^1.17.3",
-    "mongoose": "^6.6.0",
-    "slugify": "^1.6.5"
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.4.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.14.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.7",
+    "nodemailer": "^6.8.0",
+    "slugify": "^1.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.7"
   }
 }
