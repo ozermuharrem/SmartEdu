@@ -12,7 +12,7 @@ const userRoute = require('./routes/userRoute');
 const app = express();
 
 //Connect DB
-mongoose.connect('mongodb+srv://mozer:qUO5RqNVIOa46hGV@cluster0.fxuhwb7.mongodb.net/SmartEdu-db?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost:27017/smartEdu-db', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -37,7 +37,7 @@ app.use(session({
   secret: 'my_keyboard_cat',
   resave: false,
   saveUninitialized: true,
-  store: MongoStore.create({ mongoUrl: 'mongodb+srv://mozer:qUO5RqNVIOa46hGV@cluster0.fxuhwb7.mongodb.net/SmartEdu-db?retryWrites=true&w=majority' })
+  store: MongoStore.create({ 'mongodb://localhost:27017/smartEdu-db' })
 }))
 app.use(flash()); 
 app.use((req,res,next)=>{
@@ -64,5 +64,3 @@ app.listen(port, () => {
   console.log(`App started on port ${port}`);
 });
 
-
-//qUO5RqNVIOa46hGV
